@@ -1,11 +1,9 @@
-function! DisplayBar()
-
 
 if !exists("g:scroll_str")
     let g:scroll_str = "███"
 endif
 
-function! DisplayBar()
+function! s:displayBar()
     set nomore
 
 
@@ -20,7 +18,11 @@ function! DisplayBar()
 endfunction
 
 
-nnoremap <silent> n n:call DisplayBar()<CR>
-nnoremap <silent> N N:call DisplayBar()<CR>
-nnoremap <silent> * *:call DisplayBar()<CR>
-nnoremap <silent> # #:call DisplayBar()<CR>
+autocmd CursorHold * call s:displayBar()
+
+nnoremap <silent> n n:call s:displayBar()<CR>
+nnoremap <silent> N N:call s:displayBar()<CR>
+nnoremap <silent> * *:call s:displayBar()<CR>
+nnoremap <silent> # #:call s:displayBar()<CR>
+nnoremap <silent> g; g;:call s:displayBar()<CR>
+nnoremap <silent> `` ``:call s:displayBar()<CR>
