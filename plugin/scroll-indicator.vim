@@ -18,11 +18,11 @@ function! s:displayBar()
 endfunction
 
 
-autocmd CursorHold * call s:displayBar()
+autocmd CursorHold * call<SID>:displayBar()
 
-nnoremap <silent> n n:call s:displayBar()<CR>
-nnoremap <silent> N N:call s:displayBar()<CR>
-nnoremap <silent> * *:call s:displayBar()<CR>
-nnoremap <silent> # #:call s:displayBar()<CR>
-nnoremap <silent> g; g;:call s:displayBar()<CR>
-nnoremap <silent> `` ``:call s:displayBar()<CR>
+nnoremap <silent> n n:call<SID>displayBar()<CR>
+nnoremap <silent> N N:call<SID>displayBar()<CR>
+nnoremap <silent> * *:call<SID>displayBar()<CR>
+nnoremap <silent> # #:call<SID>displayBar()<CR>
+nnoremap <silent> g; g;:call<SID>displayBar()<CR>
+nnoremap <silent> `` ``:call<SID>displayBar()<CR>
