@@ -18,7 +18,7 @@ function! s:displayBar()
 endfunction
 
 
-autocmd CursorHold * call<SID>:displayBar()
+autocmd CursorHold * call<SID>displayBar()
 
 nnoremap <silent> n n:call<SID>displayBar()<CR>
 nnoremap <silent> N N:call<SID>displayBar()<CR>
